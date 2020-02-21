@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<title>nCrypt</title>
+
+	<link rel="icon" href="img/favn.png">
+
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<link type="text/css" rel="stylesheet" href="css/styledash.css" />
+</head>
+
+<body class="body" style="background-color: #121212;">
+	<header id="home">
+
+		<nav id="nav" class="navbar nav-transparent">
+			<div class="container">
+
+				<div class="navbar-header">
+
+					<div class="navbar-brand">
+						<a href="index.html">
+							<img class="logo" src="img/n.png" alt="logo">
+							<img class="logo-alt" src="img/n.png" alt="logo">
+						</a>
+					</div>
+
+					<div class="nav-collapse">
+						<span></span>
+					</div>
+
+				</div>
+
+
+				<ul class="main-nav nav navbar-nav navbar-right">
+					<li><a href="questions.html">Play</a></li>
+					<li><a href="shop.html">Shop</a></li>
+					<li><a href="leaderboard.html">Leaderboard</a></li>
+					<li><a href="dashboard.html">Dashboard</a></li>
+				</ul>
+
+
+			</div>
+		</nav>
+
+
+			<div class="container">
+				<h1 class="white-text heading">Your Points</h1>
+				<div class="column3"><h2 class="heading1">Flag Points</h2><p id="fp" class="heading1" style="font-size: 70px;">0</p></div>
+				<div class="column3"><h2 class="heading1">Defence Points</h2><p id="dp" class="heading1" style="font-size: 70px;">0</p></div>
+				<div class="column3"><h2 class="heading1">Battle Points</h2><p id="bp" class="heading1" style="font-size: 70px;">0</p></div>
+				<h1 class="white-text heading2">Your Inventory</h1>
+				<div class="column2"><h2 class="heading1">Soldiers</h2><p id="sol" class="heading1" style="font-size: 70px;">0</p></div>
+				<div class="column2"><h2 class="heading1">bombers</h2><p id="bom" class="heading1" style="font-size: 70px;">0</p></div>
+				<div class="column2"><h2 class="heading1">Aircrafts</h2><p id="air" class="heading1" style="font-size: 70px;">0</p></div>
+				<div class="column2"><h2 class="heading1">Cavalry</h2><p id="cav" class="heading1" style="font-size: 70px;">0</p></div>
+				<div class="column2"><h2 class="heading1">Tanks</h2><p id="tan" class="heading1" style="font-size: 70px;">0</p></div>
+			</div>
+
+
+			<div class="container">
+						<div class="column">
+														<div class="col-lg-2 space">
+															<p class="t">Soldiers</p>
+																		<div class="input-group bruh2">
+											<span class="minus" onclick="minus()">-</span>
+											<p class="bruh1" id="myP">0</p>
+											<span class="plus" style="display: inline-block;" onclick="plus()">+</span>
+
+																		</div>
+														</div>
+														<div class="col-lg-2 space" style="margin-left:4%">
+															<p class="t">Bombers</p>
+																		<div class="input-group bruh2">
+											<span class="minus1" onclick="minus1()">-</span>
+											<p class="bruh1" id="myP1">0</p>
+											<span class="plus1" style="display: inline-block;" onclick="plus1()">+</span>
+
+																		</div>
+														</div>
+														<div class="col-lg-2 space" style="margin-left:4%">
+															<p class="t">SpecOpsMercs</p>
+																		<div class="input-group bruh2">
+											<span class="minus3" onclick="minus3()">-</span>
+											<p class="bruh1" id="myP3">0</p>
+											<span class="plus3" style="display: inline-block;" onclick="plus3()">+</span>
+
+																		</div>
+														</div>
+														<div class="col-lg-2 space">
+															<p class="t">Tank</p>
+																		<div class="input-group bruh2">
+											<span class="minus4" onclick="minus4()">-</span>
+											<p class="bruh1" id="myP4">0</p>
+											<span class="plus4" style="display: inline-block;" onclick="plus4()">+</span>
+
+																		</div>
+														</div>
+						</div>
+										<center>
+										<button class="butt" onclick="buy()" id="def">Allocate Defence</button>
+								</center>
+
+					</div>
+				</div>
+
+	</header>
+		<script src="js/firebaseinit.js"></script>
+		<script src="js/dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<title>nCrypt</title>
+
+	<link rel="icon" href="img/favn.png">
+
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+        <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+        <script src="js/firebaseinit.js"></script>
+        <script src="js/main2.js"></script>
+</head>
+
+<body class="body" style="background-color: #121212;">
+	<header id="home">
+
+		<nav id="nav" class="navbar nav-transparent">
+			<div class="container">
+
+				<div class="navbar-header">
+
+					<div class="navbar-brand">
+						<a href="index.html">
+							<img class="logo" src="img/n.png" alt="logo">
+							<img class="logo-alt" src="img/n.png" alt="logo">
+						</a>
+					</div>
+
+					<div class="nav-collapse">
+						<span></span>
+					</div>
+
+				</div>
+
+
+				<ul class="main-nav nav navbar-nav navbar-right">
+					<li><a href="#">Play</a></li>
+					<li><a href="leaderboard.html">Leaderboard</a></li>
+					<li><a href="shop.html">Shop</a></li>
+					<li><a href="dashboard.html">Dashboard</a></li>
+				</ul>
+
+
+			</div>
+		</nav>
+
+			<div class="container" id="helo">
+
+
+			</div>
+
+	<div class="container">
+		<div class="column">                        <div class="col-lg-2">
+															<p class="t">Team</p>
+																		<div class="input-group">
+																				<p class="bruh" id="team" style="font-size:12px;cursor:pointer" onclick="teamchange()">Click To Toggle Teams</p>
+																		</div>
+														</div>
+										<div class="col-lg-2 space">
+											<p class="t">Soldiers</p>
+														<div class="input-group bruh2">
+							<span class="minus" onclick="tm()">-</span>
+							<p class="bruh1" id="myP">0</p>
+							<span class="plus" style="display: inline-block;" onclick="tp()">+</span>
+
+														</div>
+										</div>
+										<div class="col-lg-2 space">
+											<p class="tm1">Bombers</p>
+														<div class="input-group bruh2">
+							<span class="minus" onclick="minus()">-</span>
+							<p class="bruh1" id="myP">0</p>
+							<span class="plus" style="display: inline-block;" onclick="tp1()">+</span>
+
+														</div>
+										</div>
+										<div class="col-lg-2 space">
+											<p class="t">Aircrafts</p>
+														<div class="input-group bruh2">
+							<span class="minus" onclick="tm2()">-</span>
+							<p class="bruh1" id="myP">0</p>
+							<span class="plus" style="display: inline-block;" onclick="tp2()">+</span>
+
+														</div>
+										</div>
+										<div class="col-lg-2 space">
+											<p class="t">Cavaliers</p>
+														<div class="input-group bruh2">
+							<span class="minus" onclick="tm3()">-</span>
+							<p class="bruh1" id="myP">0</p>
+							<span class="plus" style="display: inline-block;" onclick="tp3()">+</span>
+
+														</div>
+										</div>
+										<div class="col-lg-2 space">
+											<p class="t">Tanks</p>
+														<div class="input-group bruh2">
+							<span class="minus" onclick="tm4()">-</span>
+							<p class="bruh1" id="myP">0</p>
+							<span class="plus" style="display: inline-block;" onclick="plus()">+</span>
+
+														</div>
+										</div>
+		</div>
+						<center>
+						<button class="butt" onclick="buy();">Attack</button>
+				</center>
+
+	</div>
+	</header>
+
+</body>
+<button onclick="myfun()">plis bhagwan plis</button>
+</html>

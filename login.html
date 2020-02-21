@@ -1,0 +1,28 @@
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="css/st.css">
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+</head>
+<body>
+<div class="form-wrap">
+		<div class="tabs">
+			<h2 class="login-tab">Logi<span style="color:red">n</span></h2>
+		</div>
+
+		<div class="tabs-content">
+				<form class="login-form" action="" method="post">
+				    <input type="text" class="input" id="user_name" autocomplete="off" placeholder="Username">
+					<input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Password">
+					<input type="checkbox" class="checkbox" id="remember_me">
+					<label for="remember_me">Remember me</label>
+					<input style="border-radius:8px" class="button" value="Login" id="submitt">
+				</form>
+		</div>
+    </div>
+    <script src="js/firebaseinit.js"></script>
+ 	<script src="js/login.js"></script>
+</body>
+</html>

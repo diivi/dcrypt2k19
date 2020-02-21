@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<title>nCrypt</title>
+
+	<link rel="icon" href="img/favn.png">
+
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+        <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+        <script src="js/firebaseinit.js"></script>
+        <script src="js/main.js"></script>
+</head>
+
+<body class="body" style="background-color: #121212;">
+	<header id="home">
+
+		<nav id="nav" class="navbar nav-transparent">
+			<div class="container">
+
+				<div class="navbar-header">
+
+					<div class="navbar-brand">
+						<a href="index.html">
+							<img class="logo" src="img/n.png" alt="logo">
+							<img class="logo-alt" src="img/n.png" alt="logo">
+						</a>
+					</div>
+
+					<div class="nav-collapse">
+						<span></span>
+					</div>
+
+				</div>
+
+
+				<ul class="main-nav nav navbar-nav navbar-right">
+					<li><a href="#">Play</a></li>
+					<li><a href="leaderboard.html">Leaderboard</a></li>
+					<li><a href="#">Defense</a></li>
+					<li><a href="dashboard.html">Dashboard</a></li>
+				</ul>
+
+
+			</div>
+		</nav>
+
+			<div class="container">
+				<div class="column"><h2 class="white-text title">Soldiers</h2>
+                        <div class="col-lg-2 space">
+                        	<p class="t">Quantity</p>
+                                <div class="input-group bruh2">
+									<span class="minus" onclick="minus()">-</span>
+									<p class="bruh1" id="myP">0</p>
+									<span class="plus" style="display: inline-block;" onclick="plus()">+</span>
+
+                                </div>
+                        </div>
+                        <div class="col-lg-2" style="">
+                        	<p class="t">Price</p>
+                                <div class="input-group">
+                                    <p class="bruh" style="" id="price">0</p>
+                                </div>
+                        </div>
+                        <div class="col-lg-2">
+                        	<p class="t">Attack</p>
+                                <div class="input-group">
+                                    <p class="bruh" style="" id="attack">0</p>
+                                </div>
+                        </div>
+                        <div class="col-lg-2">
+                        	<p class="t">Defence</p>
+                                <div class="input-group">
+                                   <p class="bruh" style="" id="defense">0</p>
+                                </div>
+                        </div>
+				</div>
+
+
+
+				<div class="column"><h2 class="white-text title">Bombers</h2>
+                        <div class="col-lg-2 space">
+                        	<p class="t">Quantity</p>
+                                <div class="input-group bruh2">
+									<span class="minus1" onclick="minus1()">-</span>
+									<p class="bruh1" id="myP1">0</p>
+									<span class="plus1" style="display: inline-block;" onclick="plus1()">+</span>
+
+                                </div>
+                        </div>
+                        <div class="col-lg-2" style="">
+                        	<p class="t">Price</p>
+                                <div class="input-group">
+                                    <p class="bruh" style="" id="price1">0</p>
+                                </div>
+                        </div>
+                        <div class="col-lg-2">
+                        	<p class="t">Attack</p>
+                                <div class="input-group">
+                                    <p class="bruh" style="" id="attack1">0</p>
+                                </div>
+                        </div>
+                        <div class="col-lg-2">
+                        	<p class="t">Defence</p>
+                                <div class="input-group">
+                                   <p class="bruh" style="" id="defense1">0</p>
+                                </div>
+                        </div>
+				</div>
+
+
+
+				<div class="column"><h2 class="white-text title">Aircrafts</h2>
+                        <div class="col-lg-2 space">
+                        	<p class="t">Quantity</p>
+                                <div class="input-group bruh2">
+									<span class="minus2" onclick="minus2()">-</span>
+									<p class="bruh1" id="myP2">0</p>
+									<span class="plus2" style="display: inline-block;" onclick="plus2()">+</span>
+
+                                </div>
+                        </div>
+                        <div class="col-lg-2" style="">
+                        	<p class="t">Price</p>
+                                <div class="input-group">
+                                    <p class="bruh" style="" id="price2">0</p>
+                                </div>
+                        </div>
+                        <div class="col-lg-2">
+                        	<p class="t">Attack</p>
+                                <div class="input-group">
+                                    <p class="bruh" style="" id="attack2">0</p>
+                                </div>
+                        </div>
+                        <div class="col-lg-2">
+                        	<p class="t">Defence</p>
+                                <div class="input-group">
+                                   <p class="bruh" style="" id="defense2">0</p>
+                                </div>
+                        </div>
+				</div>
+
+
+				<div class="column"><h2 class="white-text title">Cavalry</h2>
+                        <div class="col-lg-2 space">
+                        	<p class="t">Quantity</p>
+                                <div class="input-group bruh2">
+									<span class="minus3" onclick="minus3()">-</span>
+									<p class="bruh1" id="myP3">0</p>
+									<span class="plus3" style="display: inline-block;" onclick="plus3()">+</span>
+
+                                </div>
+                        </div>
+                        <div class="col-lg-2" style="">
+                        	<p class="t">Price</p>
+                                <div class="input-group">
+                                    <p class="bruh" style="" id="price3">0</p>
+                                </div>
+                        </div>
+                        <div class="col-lg-2">
+                        	<p class="t">Attack</p>
+                                <div class="input-group">
+                                    <p class="bruh" style="" id="attack3">0</p>
+                                </div>
+                        </div>
+                        <div class="col-lg-2">
+                        	<p class="t">Defence</p>
+                                <div class="input-group">
+                                   <p class="bruh" style="" id="defense3">0</p>
+                                </div>
+                        </div>
+				</div>
+
+
+				<div class="column"><h2 class="white-text title">Tanks</h2>
+                        <div class="col-lg-2 space">
+                        	<p class="t">Quantity</p>
+                                <div class="input-group bruh2">
+									<span class="minus4" onclick="minus4()">-</span>
+									<p class="bruh1" id="myP4">0</p>
+									<span class="plus4" style="display: inline-block;" onclick="plus4()">+</span>
+
+                                </div>
+                        </div>
+                        <div class="col-lg-2" style="">
+                        	<p class="t">Price</p>
+                                <div class="input-group">
+                                    <p class="bruh" style="" id="price4">0</p>
+                                </div>
+                        </div>
+                        <div class="col-lg-2">
+                        	<p class="t">Attack</p>
+                                <div class="input-group">
+                                    <p class="bruh" style="" id="attack4">0</p>
+                                </div>
+                        </div>
+                        <div class="col-lg-2">
+                        	<p class="t">Defence</p>
+                                <div class="input-group">
+                                   <p class="bruh" style="" id="defense4">0</p>
+                                </div>
+                        </div>
+				</div>
+                <center>
+                <button class="butt" onclick="buy();">Checkout</button>
+            </center>
+
+			</div>
+
+
+
+	</header>
+
+</body>
+
+</html>
