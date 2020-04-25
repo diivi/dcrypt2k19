@@ -1,5 +1,5 @@
 /*var firebaseConfig = {
-    apiKey: "AIzaSyBuM8Cpvnd_Mlg0-WghgaCBLONt2je4TQc",
+    apiKey: "apikey",
     authDomain: "dcrypt2019.firebaseapp.com",
     databaseURL: "https://dcrypt2019.firebaseio.com",
     projectId: "dcrypt2019",
